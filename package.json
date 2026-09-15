@@ -9,7 +9,8 @@
     "dev:frontend": "npm run dev --prefix frontend",
     "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
     "seed": "npm run seed --prefix backend",
-    "build": "npm run build --prefix frontend"
+    "build": "cd frontend && npm install && npm run build",
+    "start": "cd backend && npm install && node server.js"
   },
   "devDependencies": {
     "concurrently": "^8.2.2"
